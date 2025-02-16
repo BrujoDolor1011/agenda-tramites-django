@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card shadow-sm p-4">
+    <h2 class="text-center">Iniciar Sesión</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Entrar</button>
+            <a href="{% url 'registro' %}" class="btn btn-secondary">Registrarse</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
